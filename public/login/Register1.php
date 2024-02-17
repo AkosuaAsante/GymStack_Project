@@ -9,7 +9,7 @@
   <body>
     <div class="login-container">
       <div class="logo-info">
-        <img class="logo" src="logo_transparent.png" alt="">
+        <img class="logo" src="../images/logo_transparent.png" alt="">
         <span class="logo-text">GYM STACK</span>
       </div>
       
