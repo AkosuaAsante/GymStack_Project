@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    background-image: url('back.jpg'); 
+    background-image: url('../images/back.jpg'); 
     background-size: cover;
     background-position: center;      
 }
@@ -24,17 +24,23 @@ h2, p,label {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    justify-content: flex-start
 }
 
 form {
-  width: 80%;
-  height: 50%; 
-  padding: 2em;
+    width: 80%;
+    padding: 2em;
+  
 }
+.form-background {
+    background-color: #242424;
+    border-radius: 10px;
+    height:100vh;
+  }
 
 input,select{
     width: 100%;
-    padding: 1.5em;
+    padding: 1em;
     margin: 6px 0;
     box-sizing: border-box;
     border: 0.5px solid #1d1d1d;
@@ -64,14 +70,14 @@ input::placeholder {
 
 button {
     width: 100%;
-    padding: 20px;
+    padding: 1.5em;
     background-color: rgb(0, 89, 255);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 3em;
-    font-size: 1em;
+    font-size: 0.9em;
+    margin-top:0.5em;
 }
 
 button:hover {
