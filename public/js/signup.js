@@ -5,8 +5,8 @@
         const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
         function validateRegister(){
-            var firstName = document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
+            var firstName = document.getElementById("fname").value;
+            var lastName = document.getElementById("lname").value;
             var emailaddress = document.getElementById("email").value;
             var password = document.getElementById("password").value;
             var confirmPassword = document.getElementById("confirmPassword").value;
@@ -45,7 +45,7 @@
 
             else {
                 alert("Form submitted successfully!");
-                window.location.href = "loginpage.html";
+                window.location.href = "login/Register1.php";
             }
 
         }

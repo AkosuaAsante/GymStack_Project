@@ -13,14 +13,14 @@
         <span class="logo-text">GYM STACK</span>
       </div>
       <h2 id="welcome-back">Register Here</h2>
-      <form class="form-background" method="POST" onsubmit="return validateLogin()" id="login-form" name="login-form" >
-          <input type="text" id="fname" name="fname" placeholder="John" required />
-          <input type="text" id="lname" name="lname" placeholder="Doe" required />
-          <input type="text" id="email" name="email" placeholder="email address" required />
-          <input type="password" id="password" name="password" placeholder="password" required />
-          <input type="password" id="confirmpassword" name="confirmpassword" placeholder="confirm password" required />
-          <input type="text" class="form-control" id="gymname" placeholder="Planet Fitness">
-          <input type="text" class="form-control" id="Address" placeholder="123 St Monica Street">
+      <form class="form-background" method="POST" onsubmit="return validateRegister()" id="register-form" name="register-form" >
+          <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
+          <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required />
+          <input type="text" id="email" name="email" placeholder="Email Address" required />
+          <input type="password" id="password" name="password" placeholder="Password" required />
+          <input type="password" id="confirmpassword" name="confirmPassword" placeholder="Confirm Password" required />
+          <input type="text" class="form-control" id="gymname" placeholder="Gym Name">
+          <input type="number" class="form-control" id="phoneNumber" placeholder="Phone Number">
                   <select id="role" class="form-select">
                     <option value=0>Role</option>
                     <option value=1>Manager</option>
@@ -30,7 +30,7 @@
           <p class ="error-msg" id="error-msg"> Incorrect email or password. Try again</p>
       </form>
     </div>
-    <script src="../js/loginpage.js"></script>
+    <script src="../js/signup.js"></script>
   </body>
 
 
