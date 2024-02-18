@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gym Management System</title>
-    <link rel="stylesheet" href="../css/landing.css" />
+    <title>Gym Stack Management System</title>
+    <link rel="stylesheet" href="../css/landingpage.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
-
   <body>
-    <div class="navbar">
-      <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#">Logo</a></div>
-      <div class="nav-links">
-        <div class="sidebar-logo">
-          <span class="logo-name">Logo</span>
-          <i class='bx bx-x' ></i>
+    <div class="overlay"></div>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <img class="logo" src="../images/logo_transparent.png" alt="" />
+          <span class="logo-text">GYM STACK</span>
         </div>
-        <ul class="links">
-          <li><a href="#">HOME</a></li>
-          <li>
-            <a href="#">HTML & CSS</a>
-            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-            <ul class="htmlCss-sub-menu sub-menu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Login Forms</a></li>
-              <li><a href="#">Card Design</a></li>
-              <li class="more">
-                <span><a href="#">More</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">Neumorphism</a></li>
-                  <li><a href="#">Pre-loader</a></li>
-                  <li><a href="#">Glassmorphism</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">JAVASCRIPT</a>
-            <i class='bx bxs-chevron-down js-arrow arrow '></i>
-            <ul class="js-sub-menu sub-menu">
-              <li><a href="#">Dynamic Clock</a></li>
-              <li><a href="#">Form Validation</a></li>
-              <li><a href="#">Card Slider</a></li>
-              <li><a href="#">Complete Website</a></li>
-            </ul>
-          </li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">CONTACT US</a></li>
-        </ul>
-      </div>
-      <div class="search-box">
-        <i class='bx bx-search'></i>
-        <div class="input-box">
-          <input type="text" placeholder="Search...">
+        <div class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </nav>
-    <section class="features">
-      <div class="container">
-        <h2>Features</h2>
-        <div class="feature">
-          <img src="icon1.png" alt="Feature 1 Icon" />
-          <h3>Member Management</h3>
-          <p>
-            Keep track of member information, subscriptions, and attendance.
-          </p>
-        </div>
-        <div class="feature">
-          <img src="icon2.png" alt="Feature 2 Icon" />
-          <h3>Class Scheduling</h3>
-          <p>
-            Schedule classes, manage instructors, and allow members to book
-            classes.
-          </p>
-        </div>
-        <div class="feature">
-          <img src="icon3.png" alt="Feature 3 Icon" />
-          <h3>Payment Processing</h3>
-          <p>Handle payments, invoices, and subscriptions seamlessly.</p>
-        </div>
-      </div>
-    </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Gym Management System. All rights reserved.</p>
+        <div class="search">
+          <input class="srch" type="search" name="" placeholder="Search" />
+          <ion-icon id="search-outline"></ion-icon>
+        </div>
       </div>
-    </footer>
+      <div class="content">
+        <h1>Manage Your Fitness Center <br /><span>Effortlessly</span></h1>
+        <p class="par">
+          Welcome to Gym Stack, your all-in-one solution for managing your
+          fitness center! <br />
+          Seamlessly handle memberships, schedule classes, and streamline your
+          gym's operations.
+        </p>
+        <a class="cn" href="../login/register.php">JOIN NOW</a>
+      </div>
+
+      <div class="features">
+        <h2>Features</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <ion-icon name="barbell-outline"></ion-icon>
+            <h3>Membership Management</h3>
+            <p>
+              Easily manage your gym members' information, subscriptions, and
+              renewals.
+            </p>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <h3>Class Scheduling</h3>
+            <p>
+              Create and manage fitness classes, set schedules, and track
+              attendance.
+            </p>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="cash-outline"></ion-icon>
+            <h3>Inventory Control</h3>
+            <p>Keep track of inventory levels and make purchases as needed.</p>
+          </div>
+        </div>
+        <a class="cn" href="../login/register.php">JOIN NOW</a>
+      </div>
+
+      <div class="cta">
+        <h2>Ready to Get Started?</h2>
+        <p>
+          Join GYM STACK today and take your gym management to the next level!
+        </p>
+        <a href="#" class="btn">Sign Up Now</a>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../images/logo_transparent.png" alt="GYM STACK Logo" />
+            <span class="logo-text">GYM STACK</span>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="../view/landingpage.php">Home</a></li>
+              <p style="color: white">|</p>
+              <li><a href="#">About</a></li>
+              <p style="color: white">|</p>
+              <li><a href="#">Services</a></li>
+              <p style="color: white">|</p>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GYM STACK. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
