@@ -1,0 +1,338 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pictures {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+/* Navigation Bar */
+
+.logo-text{
+  color: white;
+  font-size: 1.6em;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  display: flex;
+  width: 35em;
+  justify-content: space-around;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.menu ul li a:hover {
+  color: #00ffea;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.srch {
+  width: 200px;
+  height: 40px;
+  background-color: #141414;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+#search-outline {
+  color: white;
+}
+
+
+
+/* Main Content */
+.content{
+  height: auto;
+  margin: auto;
+  color: #fff;
+  position: relative;
+  padding: 10em 0;
+  text-align: center;
+  font-size: 1em;
+  background: url("../images/legpress.jpg");
+  background-size: cover;
+}
+
+.content .par{
+  padding: 2em;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+.content h1{
+  font-size: 50px;
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+
+.cn{
+  background: #0d7377;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease;
+  margin: auto;
+  text-decoration: none;
+  color: #000;
+  transition: .3s ease;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.cn:hover{
+  transform: scale(1.2);
+  background: #14ffecc7;
+}
+
+.content span {
+  color: white;
+  font-size: 65px;
+  transition: color 0.5s ease, font-size 0.5s ease; 
+  font-family: 'Helvetica';
+}
+
+.content:hover span {
+  color: #00ffea;
+  font-size: 100px;
+}
+
+
+::placeholder{
+  color: #fff;
+}
+
+.liw{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.icons a{
+  text-decoration: none;
+  color: #fff;
+}
+.icons ion-icon{
+  color: #fff;
+  font-size: 30px;
+  padding-left: 14px;
+  padding-top: 5px;
+  transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+  color: #00ffea;
+}
+
+/* Features */
+.features {
+  background-image: url("../images/black_cyan_abstract3.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 3em;
+  color: #14ffec;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  padding: 3em;
+}
+
+.feature-item {
+  flex: 1;
+  max-width: 20vw;
+  height: 30vh;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #212121;
+  box-shadow: 0 0 5px white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-item:hover {
+  transform: scale(1.1);
+  transition: .5s ease;
+  box-shadow: 0 0 5px cyan, 
+              0 0 20px cyan
+              }
+
+
+.feature-item ion-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.feature-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.feature-item p {
+  font-size: 0.9em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Call to Action Section */
+.cta {
+  background-color: #17191E;
+  color: #fff;
+  padding: 75px 0;
+  text-align: center;
+}
+
+.cta .btn {
+  color:#00ffea;
+  text-decoration: NONE;
+}
+
+.cta h2 {
+  margin-bottom: 30px;
+}
+
+
+/* Footer Section */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #212121;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  padding: 0; /* Reset default list padding */
+}
+
+.footer-links ul li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.footer-links ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Social Icons */
+.social-icons ion-icon {
+  font-size: 2em;
+  margin-right: 20px;
+  color:#00ffea;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
