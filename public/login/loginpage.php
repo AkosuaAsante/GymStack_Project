@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Task Management System</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/loginpage.css" />
 </head>
 
 <body>
@@ -26,7 +26,6 @@
       <button type="submit" name="sign-in" id="sign-in" onclick="validate()">Sign In</button>
 
     </form>
-
   </div>
 
   </div>

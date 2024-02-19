@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #191919;
     display: flex;
     justify-content: center;
@@ -16,25 +16,24 @@ h2, p {
     color: white;
 }
 .login-container {
-    width: 90%;
-    height: 40%;
+    width: auto;
+    height: auto;
     max-width: 45em;
-    padding:  8em 5em;
+    padding:  5em 4em;
     background-color: #242424;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    border-radius: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: red solid;
 }
 
 form {
   width: 80%;
   height: 50%; 
-  margin: 0 auto;
+  margin: auto;
   padding: 2em;
 }
 
@@ -44,14 +43,15 @@ input {
     margin: 10px 0;
     box-sizing: border-box;
     border: 0.5px solid #1d1d1d;
-    border-radius: 5px;
-    background-color: #191919;    
+    border-radius: 20px;
+    background-color: #191919;
+    color: white;   
 }
 
 input::placeholder {
     color: grey;
     margin-right: 45px;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   
 
@@ -61,16 +61,16 @@ button {
     background-color: rgb(0, 89, 255);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 3em;
+    margin-top: 2.5em;
     font-size: 1em;
 }
 
 button:hover {
-    background-color: rgb(55, 125, 255);
+    background-color: #14ffecc7;
     cursor: pointer;
-    
+    transition: .5s ease;
 }
 .logo-info{
     display: flex;
@@ -94,12 +94,12 @@ button:hover {
 }
 
  #no-account {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 300;
  }
 
  #welcome-back {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
  }
 
@@ -112,7 +112,7 @@ button:hover {
 
  .error-msg{
   display: none;
-  color: red;
+  color: rgb(255, 113, 113);
   font-size: 14px;
  }
 
