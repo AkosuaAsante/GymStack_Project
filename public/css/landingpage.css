@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -49,13 +49,14 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  width: 70%;
   height: 80px;
   background-color: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  border: red 1px solid;
 }
 
 .icon {
@@ -96,24 +97,20 @@ body {
   color: #00ffea;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-}
-
-.srch {
-  width: 200px;
-  height: 40px;
-  background-color: #141414;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  margin-right: 50px;
-}
-#search-outline {
+.login a {
+  background: #0d7377;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease;
+  margin: auto;
+  text-decoration: none;
+  color: #000;
+  transition: .3s ease;
+  font-weight: bold;
   color: white;
+  padding: 10px 20px;
+  display: inline-block;
 }
-
 
 
 /* Main Content */
