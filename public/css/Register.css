@@ -45,19 +45,20 @@ input,select{
     box-sizing: border-box;
     border: 0.5px solid #1d1d1d;
     border-radius: 5px;
-    background-color: #191919;    
+    background-color: #191919;
+    color:#fff;      
 }
 
 option{
     color: white;
     margin-right: 45px;
-    font-size: 1.3em
+    font-size: 0.5em
 
 }
 select{
     color:grey;
     margin-right: 45px;
-    font-size: 1.0em
+    font-size: 0.5em
 }
 
 
@@ -67,7 +68,6 @@ input::placeholder {
     font-size: 1.3em;
   }
   
-
 button {
     width: 100%;
     padding: 1.5em;
