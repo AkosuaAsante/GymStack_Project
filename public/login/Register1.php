@@ -14,21 +14,20 @@
         <span class="logo-text">GYM STACK</span>
       </div>
       <h2 id="welcome-back">Register Here</h2>
+
+      <p class="error-msg" id="error-msg"></p>
+
+
       <form class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
           <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
-          <p class ="error-msg" id="fname-error-msg"> Incorrect Name . Try again</p>
 
           <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required />
-          <p class ="error-msg" id="lname-error-msg"> Incorrect Name . Try again</p>
 
           <input type="email" id="email" name="email" placeholder="Email Address" required />
-          <p class ="error-msg" id="email-error-msg"> Incorrect Email Address . Try again</p>
 
           <input type="password" id="password" name="password" placeholder="Password" required />
-          <p class ="error-msg" id="password-error-msg"> Incorrect Password . Try again</p>
 
           <input type="password" id="confirmpassword" name="confirmPassword" placeholder="Confirm Password" required />
-          <p class ="error-msg" id="cpassword-error-msg"> Password does not match. Try again</p>
 
           <input type="text" class="form-control" id="gymname" placeholder="Gym Name">
 
@@ -39,6 +38,7 @@
                     <option name="role" value=2>Customer</option>
                   </select>
             <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
+
       </form>
     </div>
 
@@ -51,25 +51,59 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmpassword').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+
+
+            const nameRegex = /^[A-Za-z\s]+$/;
+           const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+           const errorMessagesContainer = document.getElementById('error-msg');
+           errorMessagesContainer.innerHTML = "";
+
+           const errorMessages = [];
+
+            if (!validator.matches(fname, nameRegex)) {
+              errorMessages.push('Invalid First Name')
+             
+                }
+            
+             if (!validator.matches(lname, nameRegex)) {
+                 errorMessages.push('Invalid Last Name')
+                  alert('Invalid Last Name');
+                 
+                }
+        
+             if (!validator.matches(phoneNumber, phoneRegex)) {
+                errorMessages.push('Invalid Phone Number')
+                alert('Invalid Phone Number');
+               
+            }
 
           
             if (!validator.isEmail(email)) {
+                errorMessages.push('Invalid Email Address')
                 alert('Invalid email address');
-                return;
+             
             }
 
           
             if (!validator.isLength(password, { min: 6 })) {
+               errorMessages.push('Password must be at least 6 characters long');
                 alert('Password must be at least 6 characters long');
-                return;
+               
             }
 
             if (!validator.equals(password, confirmPassword)) {
+                errorMessages.push('Passwords do not match')
                 alert('Passwords do not match');
-                return;
             }
 
-            alert('Registration successful!');
+            if (errorMessages.length > 0) {
+                errorMessagesContainer.innerHTML = errorMessages.join('<br>');
+            } else {
+                errorMessagesContainer.innerHTML = ''; 
+                alert('Registration successful!');
+
+            }
         }
 
       </script>
