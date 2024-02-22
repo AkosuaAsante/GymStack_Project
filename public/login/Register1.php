@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register- Task Management System</title>
     <link rel="stylesheet" href="../css/Register.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
   </head>
   <body>
     <div class="login-container">
@@ -13,7 +14,7 @@
         <span class="logo-text">GYM STACK</span>
       </div>
       <h2 id="welcome-back">Register Here</h2>
-      <form class="form-background" method="POST" onsubmit="return validateRegister()" id="register-form" name="register-form" >
+      <form class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
           <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
           <p class ="error-msg" id="fname-error-msg"> Incorrect Name . Try again</p>
 
@@ -37,11 +38,43 @@
                     <option name="role" value=1>Manager</option>
                     <option name="role" value=2>Customer</option>
                   </select>
-            <button type="submit" name="sign-in" id="sign-in" onclick="return validateRegister()">Sign Up</button>
+            <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
       </form>
     </div>
-    <script defer src="../js/signup.js"></script>
-  </body>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmpassword').value;
+
+          
+            if (!validator.isEmail(email)) {
+                alert('Invalid email address');
+                return;
+            }
+
+          
+            if (!validator.isLength(password, { min: 6 })) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+
+            if (!validator.equals(password, confirmPassword)) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            alert('Registration successful!');
+        }
+
+      </script>
+    </body>
+
 
 
 </html>
