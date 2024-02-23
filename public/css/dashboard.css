@@ -6,7 +6,6 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-
 }
 
 .main-top h1{
@@ -24,15 +23,18 @@ nav{
     height: 100vh;
     left: 0;
     width: 320px;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    background: #0d7377;
+
+
 }
 
 .logo{
     text-align: center;
     display: flex;
-    margin: 10px 0 0 10px;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .logo img{
@@ -50,11 +52,11 @@ nav{
 
 a{
     position: relative;
-    color: rgb(85,  83, 83);
+    color: rgb(255, 255, 255);
     font-style: 14px;
     display: table;
-    width: 280px;
-    padding: 10px;
+    width: 250px;
+    padding: 20px 10px 25px 10px;
 }
 
 nav .fas{
@@ -64,7 +66,6 @@ nav .fas{
   top: 14px;
   font-size: 20px;
   text-align: center;
-
 }
 
 .nav-item{
@@ -73,8 +74,7 @@ nav .fas{
 }
 
 a:hover{
-    background-color: #eee;
-    
+    background-color: #89c0c2a4;
 }
 
 .logout{
@@ -162,7 +162,6 @@ a:hover{
     margin-top:20px ;
     text-transform: capitalize;
   }
-
   .task {
     display: flex;
     flex-direction: column;
@@ -171,10 +170,10 @@ a:hover{
     align-items: center;
     padding: 10px;
     border-bottom: 0.1px solid lightgray;
-    border: red solid;
     width: 78%;
     margin-left: 20px;
   }
+  
   .task-box{
     width: 100%;
     height: auto;
@@ -182,10 +181,9 @@ a:hover{
     margin-top: 10px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-
-    
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);   
   }
+
   .task-box ul{
     list-style: none;
     display: flex;
@@ -193,7 +191,6 @@ a:hover{
     margin: 0;
     width: 80%;
   }
-
 
   .task-box ul li i{
     margin: 10px;
@@ -232,6 +229,7 @@ a:hover{
   font-weight: normal;
   font-size: 14px;
 }
+
 /*Tables*/
 .table-container {
     width: 100%;
@@ -311,116 +309,42 @@ td button {
   color: green;
 }
 
-td button {
-  margin-right: 10px;
+/* Dashboard */
+.dashboard-section {
+  margin-top: 20px;
 }
 
-.chorelist-addchore{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.dashboard-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.chorelist-addchore button{
-  margin: 0;
-  padding: 10px 15px;
-  background-color: white;
-  border-radius: 5px;
-  font-size: 14px;
-  box-shadow:rgb(241, 241, 241) 0px 0px 0px 1px inset;
-}
-
-.chorelist-addchore i{
-  margin-right: 10px;
-  color: grey;
-}
-
-.add-chore-background {
-  background:rgba(0, 0, 0, 0.6);
-  display: none;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  margin-top: 10px;
-  position: absolute;
-  align-items: center;
-  top: 0;
-}
-
-.add-chore-container {
-  display: flex;
-  height: auto;
-  width: auto;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.3);
-  position: relative;
-  align-items: center;
-}
-
-#add-chore-form {
-  display: flex;
-  flex-direction: column;
-  height: 175px;
-  justify-content: space-between;
-  width: 300px;
-  margin: auto;
-}
-
-.add-chore-container h1 {
-  font-size: 20px;
+.dashboard-section-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
   margin-bottom: 20px;
 }
 
-#add-chore-form input {
-  display: block;
-  width: 100%;
-  padding: 8%;
-  border: 1px solid lightgray;
+.dashboard-section-content p {
+  margin: 0;
+}
+
+.statistics-overview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.statistics-item {
+  flex: 1 1 30%;
+  padding: 10px;
+  background-color: #fff;
   border-radius: 5px;
+  margin: 0 5px;
 }
 
-#add-chore-form button{
-  display: block;
-  width: 100%;
-  padding: 8%;
-}
-
-.add-chore{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.add-chore img{
-  width: 25px;
-}
-
-.close{
-  position: absolute;
-  top: -15px;
-  right: -10px;
-  border-radius: 100%;
-}
-
-#assign-chore-form{
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  justify-content: space-between;
-  width: 300px;
-  margin: auto;
-}
-
-#assign-chore-form label{
-  margin-bottom: 0;
-  padding: 0;
-}
-
-#assign-chore-form button{
-  display: block;
-  width: 100%;
-  padding: 8%;
+.statistics-item h3 {
+  margin-bottom: 5px;
 }
