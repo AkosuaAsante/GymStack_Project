@@ -1,130 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="dashboard.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="#" class="logo">
-              <img src="assignify logo.png" alt="" />
-              <span id="name" class="nav-item">Assignify</span>
-            </a>
-          </li>
-          <li>
-            <a href="admin-home.html">
-              <i class="fas fa-home"></i>
-              <span class="nav-item">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="admin-choremanagement.html">
-              <i class="fas fa-clipboard-check"></i>
-              <span class="nav-item">Chore Management</span>
-            </a>
-          </li>
-          <li>
-            <a href="admin-choreassignments.html">
-              <i class="fas fa-tasks"></i>
-              <span class="nav-item">Chore Assignments</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="settings">
-              <i class="fas fa-cog"></i>
-              <span class="nav-item">Settings</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="help">
-              <i class="fas fa-question-circle"></i>
-              <span class="nav-item">Help</span>
-            </a>
-          </li>
-          <li>
-            <a href="loginpage.html" class="logout">
-              <i class="fas fa-sign-out-alt"></i>
-              <span class="nav-item">Log out</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
 
-      
-      <section class="main">
-        <div class="main-top">
-          <h1>DASHBOARD<span>admin</span></h1>
-          <i class="fas fa-user-cog"></i>
-        </div>
-          <h1>Chore Statistics</h1>
-        <div class="main-skills">
-          <a href="managechores.html" class="card">
-            <i class="fas fa-globe"></i>
-            <h3>All Chores</h3>
-            <p>14</p>
-          </a>
-          <a href="managechores.html" class="card">
-            <i class="fas fa-clock"></i>
-            <h3>In Progress</h3>
-            <p>14</p>
-          </a>
-          <a href="managechores.html" class="card">
-            <i class="fas fa-exclamation"></i>
-            <h3>Incomplete</h3>
-            <p>3</p>
-          </a>
-          <a href="managechores.html" class="card">
-            <i class="fas fa-check"></i>
-            <h3>Completed</h3>
-            <p>12</p>
-          </a>
-        </div>
-        <section class="main-task">
-          <h1>Assigned Tasks</h1>
-          <div class="task-box">
-              <div class="table-container">
-                  <table>
-                      <thead>
-                          <tr>
-                            <th><i class="fas fa-clipboard"></i>Task Name</th>
-                            <th><i class="fas fa-user"></i>Assigned To</th>
-                            <th><i class="fas fa-calendar-day"></i>Date Assigned</th>              
-                            <th><i class="fas fa-spinner"></i>Status</th>
-                              
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td>Wash Car</td>
-                              <td>Father</td>
-                              <td>12/09/21</td>
-                              <td>In Progress</td>
-                              
-                              <td><button>Edit</button></td>
-                          </tr>
-                          <tr>
-                              <td>Laundry</td>
-                              <td>Mother</td>
-                              <td>23/09/21</td>
-                              <td>Incomplete</td>
-                              <td><button>Edit</button></td>
-                          </tr>
-                      </tbody>
-                  </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <div href="#" class="logo">
+            <img src="../images/logo_transparent.png" alt="" />
+            <span id="name" class="nav-item">GYM STACK</span>
           </div>
-              </div>            
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-home"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-list"></i>
+            <span class="nav-item">Client List</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-dollar-sign"></i>
+            <span class="nav-item">Subscriptions</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="settings">
+            <i class="fas fa-cog"></i>
+            <span class="nav-item">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="nav-item">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Dashboard</h1>
+      </div>
+
+      <div class="dashboard-section" id="calendar-section">
+        <h2>Calendar of Sessions</h2>
+        <div class="dashboard-section-content">
+          <div id="calendar"></div>
         </div>
+      </div>
+
+
+      <div class="dashboard-section">
+        <h2>Upcoming Events</h2>
+        <div class="dashboard-section-content">
+          <!-- Upcoming Events Content -->
         </div>
-      </section>
-    </div>
-  </body>
+      </div>
+
+      <!-- Statistics Overview -->
+      <div class="dashboard-section">
+        <h2>Statistics Overview</h2>
+        <div class="dashboard-section-content statistics-overview">
+          <!-- Statistics Content -->
+        </div>
+      </div>
+
+      <!-- Total Revenue, Total Expenses, Net Profit -->
+      <div class="dashboard-section">
+        <div class="dashboard-section-content statistics-item">
+          <h3>Total Revenue</h3>
+          <p>$XXXX</p>
+        </div>
+        <div class="dashboard-section-content statistics-item">
+          <h3>Total Expenses</h3>
+          <p>$XXXX</p>
+        </div>
+        <div class="dashboard-section-content statistics-item">
+          <h3>Net Profit</h3>
+          <p>$XXXX</p>
+        </div>
+      </div>
+
+      <!-- Total Users, Active Users -->
+      <div class="dashboard-section">
+        <div class="dashboard-section-content statistics-item">
+          <h3>Total Users</h3>
+          <p>XXXX</p>
+        </div>
+        <div class="dashboard-section-content statistics-item">
+          <h3>Active Users</h3>
+          <p>XXXX</p>
+        </div>
+      </div>
+
+      <!-- Reports (From Clients) -->
+      <div class="dashboard-section">
+        <h2>Reports (From Clients)</h2>
+        <div class="dashboard-section-content">
+          <!-- Reports Content -->
+        </div>
+      </div>
+  </div>
+  </div>
+  </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+
 </html>
