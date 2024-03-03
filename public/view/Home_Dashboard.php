@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li class="sidebar-items">
-                        <a href="#" class="sidebar-link">
+                        <a href="../view/Client_list.php" class="sidebar-link">
                         <i class="lni lni-list"></i>
                          <span>Client List</span>
                         </a>
