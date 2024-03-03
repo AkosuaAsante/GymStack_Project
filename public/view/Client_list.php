@@ -73,7 +73,7 @@
                         <p class="navbar-brand lead">Client List</p>
                     </div>
                     <div class="d-flex align-items-center ms-auto">
-                    <!-- Search bar and button -->
+                   
                       <form class="d-flex" action="#" method=post> 
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">
@@ -82,6 +82,12 @@
                       </form>
                     </div>
                 </nav>
+                <div class="d-flex justify-content-end mb-3 mt-3 mx-3">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addClientModal">
+                <i class="lni lni-plus"></i> Add Client
+                </button>
+            </div>
+
 
                 <div class="table mt-5 mx-auto">
                     <table class="table">
@@ -106,10 +112,10 @@
                            <td>0203334567</td>
                            <td>Monthly</td>
                            <td>Active</td>
-                           <td><button class="btn btn-warning">
+                           <td><button class="btn ">
                                     <i class="lni lni-pencil"></i> Edit
                                 </button>
-                                <button class="btn btn-danger">
+                                <button class="btn">
                                 <i class="lni lni-trash-can"></i> Delete
                                 </button></td>
 
@@ -123,14 +129,12 @@
                             <td>0203334567</td>
                             <td>Monthly</td>
                             <td>Active</td>
-                            <td><button class="btn btn-warning">
+                            <td><button class="btn ">
                                     <i class="lni lni-pencil"></i> Edit
                                 </button>
-                                <button class="btn btn-danger">
+                                <button class="btn ">
                                 <i class="lni lni-trash-can"></i> Delete
                                 </button></td>
-
-
                           </tr>
                            <tr>
                           <th scope="row">3</th>
@@ -140,10 +144,10 @@
                           <td>0203334567</td>
                           <td>Monthly</td>
                           <td>Active</td>
-                          <td><button class="btn btn-warning">
+                          <td><button class="btn ">
                                     <i class="lni lni-pencil"></i> Edit
                                 </button>
-                                <button class="btn btn-danger">
+                                <button class="btn ">
                                 <i class="lni lni-trash-can"></i> Delete
                                 </button></td>
                           
@@ -151,24 +155,89 @@
                       </tbody>
                   </table>
 
-  
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-            
+                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
-       <script src="../js/dashboard.js"></script>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="addClientModal" tabindex="-1" aria-labelledby="addClientModalLabel" aria-hidden="true">
+             <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h5 class="modal-title" id="addClientModalLabel">Add Client</h5>
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="lname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="fname" required>
+                            <label for="lname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname" required>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="number" class="form-label">Number</label>
+                            <input type="number" class="form-control" id="number" name="number" required>
+                            <label for="Subscription" class="form-label">Subscription</label>
+                            <input type="text" class="form-control" id="subscription" name="subscription" required>
+                            <label for="Status" class="form-label">Status</label>
+                            <input type="text" class="form-control" id="status" name="status" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+              </div>
+
+             <div>
+       </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
+      crossorigin="anonymous"></script>
     </body>
 </html>
