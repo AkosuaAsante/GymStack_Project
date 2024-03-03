@@ -23,19 +23,19 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-items">
-                        <a href="../view/Home_dashboard.php" class="sidebar-link">
+                        <a href="../view/Home_Dashboard.php" class="sidebar-link">
                             <i class="lni lni-home"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li class="sidebar-items">
-                        <a href="#" class="sidebar-link">
+                        <a href="../view/Client_list.php" class="sidebar-link">
                         <i class="lni lni-list"></i>
                          <span>Client List</span>
                         </a>
                     </li>
                     <li class="sidebar-items">
-                        <a href="#" class="sidebar-link">
+                        <a href="../view/Tasks.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
                          <span>Tasks </span>
                         </a>
