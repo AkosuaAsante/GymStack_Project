@@ -120,7 +120,37 @@
 
 
         </div>
-  
+
+        <!--Add Modal -->
+        <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+                <div class="modal-content">
+                   <div class="modal-header">
+                    <h5 class="modal-title" id="addTaskModalLabel">Add New Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                <div>
+                <div class="modal-body">
+                    <!-- Form-->
+                    <form>
+                        <div class="mb-3">
+                            <label for="taskName" class="form-label">Task Name</label>
+                            <input type="text" class="form-control" id="taskName" name="taskName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dueDate" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-success">Add Task</button>
+                        </div>
+                    </form>   
+            </div> 
+       </div>     
+       
+       
+
+       
         
         
 
