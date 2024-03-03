@@ -23,7 +23,7 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-items">
-                        <a href="../view/Home_dashboard.php" class="sidebar-link">
+                        <a href="../view/Home_Dashboard.php" class="sidebar-link">
                             <i class="lni lni-home"></i>
                             <span>Home</span>
                         </a>
