@@ -74,7 +74,8 @@
                 </nav>
                 <div class="row mt-4">
                     <!-- Upcoming Events -->
-                    <div class="col md-4 mx-4 ">
+                    <a href="../view/Tasks.php" style='text-decoration:none;' >
+                     <div class="col md-4 mx-4 ">
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">Upcoming Events</h6>
@@ -82,6 +83,7 @@
                             </div>
                         </div>
                     </div>
+                   </a>
                 </div>
 
                 <div class="row mt-5 m-4">
