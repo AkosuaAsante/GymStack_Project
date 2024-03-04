@@ -89,7 +89,7 @@
             </div>
 
 
-                <div class="table mt-5 mx-auto">
+                <div class="table mt-5 mx-4">
                     <table class="table">
                        <thead>
                           <tr>
