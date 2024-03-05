@@ -9,35 +9,10 @@
          crossorigin="anonymous">
          <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
          <link rel="stylesheet" href="../css/dasboard.css">
-
-
-
-
-         <style>
-        .task-list {
-            max-width: 1000px;
-            margin: 20px auto;
-        }
-
-        .task-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .task-buttons {
-            display: flex;
-            gap: 5px;
-        }
-    </style>
-       
     </head>
      <body>
         <div class="wrapper">
-            <aside id="sidebar">
+        <aside id="sidebar">
                 <div class="d-flex">
                     <button id="toggle-btn" type="button">
                         <i class="lni lni-grid-alt"></i>
@@ -92,68 +67,77 @@
                 </div>
             </aside>
             <div class="main p3">
-               <nav class="navbar navbar-expand px-2 border-bottom">
+            <nav class="navbar navbar-expand px-3 border-bottom">
                     <div class="navbar">
-                        <p class="navbar-brand lead">Tasks</p>
+                        <p class="navbar-brand lead">Expenses and Revenue</p>
                     </div>
-                </nav>   
-                <div class="task-list">
-               <div class="d-flex  mb-4 justify-content-end">
-                   <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTaskModal">
-                   <i class="lni lni-plus"></i> Add New Task
-                    </button>
-               </div>
-            
-            <!-- Task Items -->
-                <div class="task-item">
-                    <div>
-                    <h5>Task 1</h5>
-                    <p>Date Due: 2024-03-10</p>
-                     </div>
-                    <div class="task-buttons">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#editTaskModal"><i class="lni lni-trash-can"></i></button>
-                    <button class="btn" ><i class="lni lni-pencil"></i></button>
-                     </div>
+                </nav>
+                <div class="d-flex  mb-4 justify-content-end mx-4">
+                <button type="button" class="btn btn-success mt-4 d-flex  mb-4 " data-bs-toggle="modal" data-bs-target="#addTransactionModal">
+                <i class="lni lni-plus"></i>Add Transaction
+                 </button>
+                 </div>
+
+                 <div class="row mt-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transaction Summary</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionTableBody">
+                                <!-- Transaction data w-->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-
-             </div>
-
-
+            </div>
         </div>
+    </div>
 
-        <!--Add Modal -->
-        <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
-           <div class="modal-dialog">
-                <div class="modal-content">
-                   <div class="modal-header">
-                    <h5 class="modal-title" id="addTaskModalLabel">Add New Task</h5>
+
+
+           </div> 
+     </div>  
+      <!-- Add Transaction Modal -->
+    <div class="modal fade" id="addTransactionModal" tabindex="-1" aria-labelledby="addTransactionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTransactionModalLabel">Add Transaction</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   </div>
-                <div>
+                </div>
                 <div class="modal-body">
-                    <!-- Form-->
-                    <form>
+                    <form id="financeForm">
                         <div class="mb-3">
-                            <label for="taskName" class="form-label">Task Name</label>
-                            <input type="text" class="form-control" id="taskName" name="taskName" required>
+                            <label for="transactionType" class="form-label">Transaction Type</label>
+                            <select class="form-select" id="transactionType" required>
+                                <option value="expense">Expense</option>
+                                <option value="revenue">Revenue</option>
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label for="dueDate" class="form-label">Due Date</label>
-                            <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="amount" required>
                         </div>
-                        <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-success">Add Task</button>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3"></textarea>
                         </div>
-                    </form>   
-            </div> 
-       </div>     
-       
-       
-
-       
-        
-        
-
+                        <button type="button" class="btn btn-primary" onclick="addTransaction()">Add Transaction</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     
+     
+     
 
 
 
@@ -174,9 +158,9 @@
 
 
 
- 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD" crossorigin="anonymous"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
     <script src="../js/dashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
@@ -185,7 +169,6 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
       crossorigin="anonymous"></script>
-    </body>
-    
-                    
-</html>                   
+</body>           
+
+</html                
