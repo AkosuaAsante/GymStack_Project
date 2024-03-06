@@ -94,10 +94,13 @@
                                     <label for="profile-picture"
                                         class="block text-sm font-semibold text-gray-700">Profile
                                         Picture</label>
-                                    <img id="profile-image" class="rounded-full h-20 w-20 mx-auto"
-                                        src="../images/blank profile.png" alt="profile" />
+                                    <div id="profile-image" class="box-content h-40 w-40">
+                                        <img class="object-scale-down h-48" id="profile-image"
+                                            src="../images/blank profile.png" alt="profile" />
+                                    </div>
                                     <input type="file" id="profile-pic-input" name="profilePicture" class="mt-2"
                                         accept="image/*">
+
                                 </div>
 
                                 <div class="mb-4">
