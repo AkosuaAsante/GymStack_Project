@@ -22,48 +22,12 @@
                 <div class="sidebar-logo">
                     <a href="#" class="sidebar-link"> Gym Stack</a>
                 </div>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-items">
-                        <a href="../view/Home_Dashboard.php" class="sidebar-link">
-                            <i class="lni lni-home"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-items">
-                        <a href="../view/Client_list.php" class="sidebar-link">
-                        <i class="lni lni-list"></i>
-                         <span>Client List</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-items">
-                        <a href="../view/Tasks.php" class="sidebar-link">
-                        <i class="lni lni-clipboard"></i>
-                         <span>Tasks </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-items">
-                        <a href="#" class="sidebar-link">
-                        <i class="lni lni-bi-cycle"></i>
-                         <span>Classes </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-items">
-                        <a href="../view/Finance.php" class="sidebar-link">
-                        <i class="lni lni-coin"></i>
-                         <span>Finances </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-items">
-                        <a href="#" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                         <span>Profile </span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="sidebar-footer">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-exit"></i>           
-                         <span>Log Out</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-items">
+                    <a href="../view/Home_Dashboard.php" class="sidebar-link">
+                        <i class="lni lni-home"></i>
+                        <span>Home</span>
                     </a>
                 </li>
                 <li class="sidebar-items">
@@ -85,7 +49,7 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="#" class="sidebar-link">
+                    <a href="../view/Finance.php" class="sidebar-link">
                         <i class="lni lni-coin"></i>
                         <span>Finances </span>
                     </a>

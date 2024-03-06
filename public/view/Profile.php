@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="#" class="sidebar-link">
+                    <a href="../view/Finance.php" class="sidebar-link">
                         <i class="lni lni-coin"></i>
                         <span>Finances </span>
                     </a>

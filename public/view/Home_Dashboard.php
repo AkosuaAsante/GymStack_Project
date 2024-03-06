@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="#" class="sidebar-link">
+                    <a href="../view/Finance.php" class="sidebar-link">
                         <i class="lni lni-coin"></i>
                         <span>Finances </span>
                     </a>
@@ -82,20 +82,35 @@
                             <!-- Add upcoming events content here -->
                         </div>
                     </div>
-                </nav>
-                <div class="row mt-4">
-                    <!-- Upcoming Events -->
-                    <a href="../view/Tasks.php" style='text-decoration:none;' >
-                     <div class="col md-4 mx-4 ">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-title">Upcoming Events</h6>
-                                <!-- Add upcoming events content here -->
+                    </nav>
+                    <div class="row mt-4">
+                        <!-- Upcoming Events -->
+                        <a href="../view/Tasks.php" style='text-decoration:none;'>
+                            <div class="col md-4 mx-4 ">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Upcoming Events</h6>
+                                        <!-- Add upcoming events content here -->
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                   </a>
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
 
@@ -103,24 +118,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
-    <script src="../js/dashboard.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+        <script src="../js/dashboard.js"></script>
 </body>
 
 
