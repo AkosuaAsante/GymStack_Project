@@ -348,3 +348,8 @@ td button {
 .statistics-item h3 {
   margin-bottom: 5px;
 }
+
+form img #profile-image {
+  width: 20px;
+  height: auto;
+}

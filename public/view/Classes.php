@@ -71,7 +71,7 @@
         <div class="main p3">
             <nav class="navbar navbar-expand px-2 border-bottom">
                 <div class="navbar">
-                    <p class="navbar-brand lead">Client List</p>
+                    <p class="navbar-brand lead">Classes List</p>
                 </div>
                 <div class="d-flex align-items-center ms-auto">
 
@@ -85,7 +85,7 @@
             </nav>
             <div class="d-flex justify-content-end mb-3 mt-3 mx-3">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addClientModal">
-                    <i class="lni lni-plus"></i> Add Client
+                    <i class="lni lni-plus"></i> Add Class
                 </button>
             </div>
 
@@ -94,30 +94,26 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Number</th>
-                            <th scope="col">Subcription</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Class ID</th>
+                            <th scope="col">Class Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Instructor Name</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>nds@gmail.com</td>
-                            <td>0203334567</td>
-                            <td>Monthly</td>
-                            <td>Active</td>
+                            <td>Aerobics</td>
+                            <td>01/03/2023</td>
+                            <td>12:00 PM</td>
+                            <td>David Graham</td>
                             <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i> Edit
+                                    <i class="lni lni-pencil"></i>
                                 </button>
                                 <button class="btn">
-                                    <i class="lni lni-trash-can"></i> Delete
+                                    <i class="lni lni-trash-can"></i>
                                 </button>
                             </td>
 
@@ -125,36 +121,31 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>dfe@gmailcom</td>
-                            <td>0203334567</td>
-                            <td>Monthly</td>
-                            <td>Active</td>
+                            <td>Stretching</td>
+                            <td>02/03/2023</td>
+                            <td>01:00 PM</td>
+                            <td>David Graham</td>
                             <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i> Edit
+                                    <i class="lni lni-pencil"></i>
                                 </button>
-                                <button class="btn ">
-                                    <i class="lni lni-trash-can"></i> Delete
+                                <button class="btn">
+                                    <i class="lni lni-trash-can"></i>
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>Olsen</td>
-                            <td>lawthelar@gmailcom</td>
-                            <td>0203334567</td>
-                            <td>Monthly</td>
-                            <td>Active</td>
+                            <td>Cardio</td>
+                            <td>02/03/2023</td>
+                            <td>03:30 PM</td>
+                            <td>Kristine Sparks</td>
                             <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i> Edit
+                                    <i class="lni lni-pencil"></i>
                                 </button>
-                                <button class="btn ">
-                                    <i class="lni lni-trash-can"></i> Delete
+                                <button class="btn">
+                                    <i class="lni lni-trash-can"></i>
                                 </button>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
@@ -169,24 +160,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addClientModalLabel">Add Client</h5>
+                    <h5 class="modal-title" id="addClientModalLabel">Add Class</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="#" method="post">
                         <div class="mb-3">
-                            <label for="lname" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="fname" name="fname" required>
-                            <label for="lname" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lname" name="lname" required>
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <label for="number" class="form-label">Number</label>
-                            <input type="number" class="form-control" id="number" name="number" required>
-                            <label for="Subscription" class="form-label">Subscription</label>
-                            <input type="text" class="form-control" id="subscription" name="subscription" required>
-                            <label for="Status" class="form-label">Status</label>
-                            <input type="text" class="form-control" id="status" name="status" required>
+                            <label for="class-name" class="form-label">Class Name</label>
+                            <input type="text" class="form-control" id="class-name" name="class-name" required>
+                            <label for="class-date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="class-date" name="class-date" required>
+                            <label for="class-time" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="class-time" name="class-time" required>
+                            <label for="instructor-name" class="form-label">Instructor Name</label>
+                            <select name="instructor-name" id="instructor-name">
+                                <option value="Steve Urkel"> Steve Urkel</option>
+                                <option value="Jessice Jones">Jessice Jones</option>
+                                <option value="David Graham">David Graham</option>
+                                <option value="Kristine Sparks">Kristine Sparks</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
