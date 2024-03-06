@@ -82,56 +82,19 @@
                             <!-- Add upcoming events content here -->
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="row mt-5 m-4">
-                <div class="col-md-4">
-                    <div class="card enlarge-card">
-                        <div class="card-body">
-                            <p class="card-title"><i class="lni lni-revenue"></i> Total Revenue</p>
-                            <p class="card-text">$XXXX</p>
+                </nav>
+                <div class="row mt-4">
+                    <!-- Upcoming Events -->
+                    <a href="../view/Tasks.php" style='text-decoration:none;' >
+                     <div class="col md-4 mx-4 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Upcoming Events</h6>
+                                <!-- Add upcoming events content here -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card enlarge-card">
-                        <div class="card-body">
-                            <p class="card-title"><i class="lni lni-revenue"></i> Total Expenses</p>
-                            <p class="card-text">$XXXX</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card enlarge-card">
-                        <div class="card-body">
-                            <p class="card-title"><i class="lni lni-revenue"></i> Net Profit</p>
-                            <p class="card-text">$XXXX</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5 m-4">
-                <div class="col-md-6">
-                    <div class="card enlarge-card">
-                        <div class="card-body">
-                            <p class="card-title"><img width="30" height="30"
-                                    src="https://img.icons8.com/ios-filled/50/group-foreground-selected.png"
-                                    alt="group-foreground-selected" /> Total Customers</p>
-                            <p class="card-text">$XXXX</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card enlarge-card">
-                        <div class="card-body">
-                            <p class="card-title"><img width="30" height="30"
-                                    src="https://img.icons8.com/ios-filled/50/group-foreground-selected.png"
-                                    alt="group-foreground-selected" /></i> Active Customers</p>
-                            <p class="card-text">$XXXX</p>
-                        </div>
-                    </div>
+                   </a>
                 </div>
 
             </div>
