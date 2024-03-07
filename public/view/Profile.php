@@ -96,7 +96,7 @@
                                         Picture</label>
                                     <div id="profile-image" class="box-content h-40 w-40">
                                         <img class="object-scale-down h-48" id="profile-image"
-                                            src="../images/blank profile.png" alt="profile" />
+                                            src="../images/blank profile.png" alt="profile"width='50px' length="50px" />
                                     </div>
                                     <input type="file" id="profile-pic-input" name="profilePicture" class="mt-2"
                                         accept="image/*">
