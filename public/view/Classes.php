@@ -13,6 +13,10 @@
 </head>
 
 <body>
+<?php
+    // Include the role selection query logic
+    require_once('../functions/select_instructor.php');
+    ?>
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
@@ -103,50 +107,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Aerobics</td>
-                            <td>01/03/2023</td>
-                            <td>12:00 PM</td>
-                            <td>David Graham</td>
-                            <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="lni lni-trash-can"></i>
-                                </button>
-                            </td>
-
-
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Stretching</td>
-                            <td>02/03/2023</td>
-                            <td>01:00 PM</td>
-                            <td>David Graham</td>
-                            <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="lni lni-trash-can"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Cardio</td>
-                            <td>02/03/2023</td>
-                            <td>03:30 PM</td>
-                            <td>Kristine Sparks</td>
-                            <td><button class="btn ">
-                                    <i class="lni lni-pencil"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="lni lni-trash-can"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        <?php
+                        // Include the class selection query logic
+                        require_once('../functions/get_all_classes.php');
+                        ?>
                     </tbody>
                 </table>
 
@@ -164,20 +128,25 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <form action="../action/add_class_action.php" method="post">
                         <div class="mb-3">
                             <label for="class-name" class="form-label">Class Name</label>
                             <input type="text" class="form-control" id="class-name" name="class-name" required>
                             <label for="class-date" class="form-label">Date</label>
                             <input type="date" class="form-control" id="class-date" name="class-date" required>
-                            <label for="class-time" class="form-label">Time</label>
-                            <input type="time" class="form-control" id="class-time" name="class-time" required>
+                            <label for="class-start-time" class="form-label">Start Time</label>
+                            <input type="time" class="form-control" id="class-start-time" name="class-start-time" required>
+                            <label for="class-end-time" class="form-label">end Time</label>
+                            <input type="time" class="form-control" id="class-end-time" name="class-end-time" required>
                             <label for="instructor-name" class="form-label">Instructor Name</label>
                             <select name="instructor-name" id="instructor-name">
-                                <option value="Steve Urkel"> Steve Urkel</option>
-                                <option value="Jessice Jones">Jessice Jones</option>
-                                <option value="David Graham">David Graham</option>
-                                <option value="Kristine Sparks">Kristine Sparks</option>
+
+                            <?php
+                                    // Populate the dropdown with family roles
+                                    foreach ($instructors as $role) {
+                                        echo "<option value=" . $role['instructor_id'] . ">" .  $role['full_name'] . "</option>";
+                                    }
+                                    ?>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Save</button>
