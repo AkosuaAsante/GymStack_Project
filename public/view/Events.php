@@ -6,12 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/dasboard.css">
-
-
-
+    <link rel="stylesheet" href="../css/dasboard.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         .task-list {
@@ -63,7 +61,7 @@
                 <li class="sidebar-items">
                     <a href="../view/Tasks.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
-                        <span>Tasks </span>
+                        <span>Events </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
@@ -95,28 +93,20 @@
         <div class="main p3">
             <nav class="navbar navbar-expand px-2 border-bottom">
                 <div class="navbar">
-                    <p class="navbar-brand lead">Tasks</p>
+                    <p class="navbar-brand lead">Events</p>
                 </div>
             </nav>
             <div class="task-list">
                 <div class="d-flex  mb-4 justify-content-end">
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTaskModal">
-                        <i class="lni lni-plus"></i> Add New Task
+                        <i class="lni lni-plus"></i> Add New Event
                     </button>
                 </div>
 
                 <!-- Task Items -->
-                <div class="task-item">
-                    <div>
-                        <h5>Task 1</h5>
-                        <p>Date Due: 2024-03-10</p>
-                    </div>
-                    <div class="task-buttons">
-                        <button class="btn" data-bs-toggle="modal" data-bs-target="#editTaskModal"><i
-                                class="lni lni-trash-can"></i></button>
-                        <button class="btn"><i class="lni lni-pencil"></i></button>
-                    </div>
-                </div>
+                <?php 
+                 require_once('../functions/get_all_events.php');
+                ?>
 
             </div>
 
@@ -134,17 +124,21 @@
                     <div>
                         <div class="modal-body">
                             <!-- Form-->
-                            <form>
+                            <form method="post" action="../action/add_event_action.php">
                                 <div class="mb-3">
-                                    <label for="taskName" class="form-label">Task Name</label>
-                                    <input type="text" class="form-control" id="taskName" name="taskName" required>
+                                    <label for="eventName" class="form-label">Event Name</label>
+                                    <input type="text" class="form-control" id="eventName" name="eventName" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="dueDate" class="form-label">Due Date</label>
-                                    <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+                                    <label for="date" class="form-label">Event Date</label>
+                                    <input type="date" class="form-control" id="date" name="date" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="description" name="description" required>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-success">Add Task</button>
+                                    <button type="submit" class="btn btn-success text-black">Add Event</button>
                                 </div>
                             </form>
                         </div>
@@ -182,7 +176,6 @@
                         integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD"
                         crossorigin="anonymous"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
-                    <script src="../js/dashboard.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
                         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
                         crossorigin="anonymous"></script>

@@ -36,9 +36,9 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Tasks.php" class="sidebar-link">
+                    <a href="../view/Events.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
-                        <span>Tasks </span>
+                        <span>Events </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
@@ -95,6 +95,9 @@
                                 </thead>
                                 <tbody id="transactionTableBody">
                                     <!-- Transaction data w-->
+                                    <?php 
+                                        require_once("../functions/get_all_transactions.php")
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -117,23 +120,23 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="financeForm">
+                    <form id="financeForm" action="../action/add_transaction.action.php" method="post">
                         <div class="mb-3">
                             <label for="transactionType" class="form-label">Transaction Type</label>
-                            <select class="form-select" id="transactionType" required>
-                                <option value="expense">Expense</option>
-                                <option value="revenue">Revenue</option>
+                            <select class="form-select" id="transactionType" name="transactionType" required>
+                                <option value="OUT">Expense</option>
+                                <option value="IN">Revenue</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="amount" class="form-label">Amount</label>
-                            <input type="number" class="form-control" id="amount" required>
+                            <input type="number" class="form-control" id="amount"  name="amount" required>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" rows="3"></textarea>
+                            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="addTransaction()">Add
+                        <button type="submit" class="btn btn-primary" onclick="addTransaction()">Add
                             Transaction</button>
                     </form>
                 </div>
