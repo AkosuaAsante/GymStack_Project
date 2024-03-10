@@ -55,7 +55,9 @@
 
 
             const nameRegex = /^[A-Za-z\s]+$/;
-           const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+          const phoneRegex = /^(\+\d{1,4}\s?)?\d{6,14}$/;
+
+           //const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
            const errorMessagesContainer = document.getElementById('error-msg');
            errorMessagesContainer.innerHTML = "";
 
@@ -102,6 +104,7 @@
             } else {
                 errorMessagesContainer.innerHTML = ''; 
                 alert('Registration successful!');
+                window.location.href = "../login/loginpage.php";
 
             }
         }
