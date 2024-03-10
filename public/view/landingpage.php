@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="login">
-      <a href="../login/login.php">Login</a>
+      <a href="../login/loginpage.php">Login</a>
     </div>
   </div>
   <div class="content">

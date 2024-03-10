@@ -40,9 +40,9 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Tasks.php" class="sidebar-link">
+                    <a href="../view/Events.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
-                        <span>Tasks </span>
+                        <span>Events </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
@@ -80,12 +80,15 @@
 
                 <div class="row mt-4">
                     <!-- Upcoming Events -->
-                    <a href="../view/Tasks.php" style='text-decoration:none;' >
+                    <a href="../view/Events.php" style='text-decoration:none;' >
                      <div class="col md-4 mx-4 ">
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">Upcoming Events</h6>
                                 <!-- Add upcoming events content here -->
+                                <?php
+                                require_once('../functions/get_upcoming_event.php');
+                                ?>
                             </div>
                         </div>   
                       </div>   
