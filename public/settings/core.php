@@ -8,4 +8,3 @@ function check_login() {
         die();
     }
 }
-?>
