@@ -18,7 +18,7 @@
       <p class="error-msg" id="error-msg"></p>
 
 
-      <form  action="../action/register.php" class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
+      <form  action="../action/register_user_action.php" class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
           <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
 
           <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required />
