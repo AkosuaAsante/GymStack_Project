@@ -1,16 +1,12 @@
 <?php
 // Declare constant variables for database connection parameters
-$servername = "localhost:3306";
-$username = "root";
-$password = "@StrateGicPlan20178##";
-$database = "gym";
+$SERVER = "localhost:3308";
+$USERNAME = "root";
+$PASSWORD = "@StrateGicPlan20178##";
+$DATABASE = "gym";
 
-// Use mysqli connection method
-$mysqli = new mysqli($servername, $username, $password, $database);
+$con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE) or die("The database was not created");
 
-// Check if the connection worked
-if ($mysqli->connect_error) {
-    error_log("Connection failed: " . $mysqli->connect_error);
-    die("Sorry, something went wrong. Please try again later.");
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
-?>
