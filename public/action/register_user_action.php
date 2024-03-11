@@ -20,10 +20,10 @@ if (true) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Check if the connection object is valid
-    if ($con) {
+    if ($mysqli) {
         // Prepare the SQL statement
         $query = "INSERT INTO users (fname, lname, email, phoneNumber, password, role, gymname) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $con->prepare($query);
+        $stmt = $mysqli->prepare($query);
 
         if ($stmt) {
             // Bind parameters and execute the query

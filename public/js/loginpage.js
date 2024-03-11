@@ -13,7 +13,7 @@ function validateLogin(){
     console.log(passwordValid);
     if(emailValid && passwordValid){
         alert("Login Successful")
-        window.location.href = "home.html";
+        window.location.href = "../view/Home_Dashboard.php";
         return false;
     } else {
         errorMsg.style.display = 'block';

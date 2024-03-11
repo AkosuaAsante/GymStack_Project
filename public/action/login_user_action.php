@@ -12,12 +12,12 @@ if (isset($_POST['sign-in'])) {
 
     // Prepare and execute SQL query to retrieve user data
     $query = "SELECT * FROM users WHERE email = ?"; 
-    $stmt = $con->prepare($query);
+    $stmt = $mysqli->prepare($query);
     
     if (!$stmt) {    
         $response = array(
             'success' => false,
-            'message' => 'Database error: ' . $con->error
+            'message' => 'Database error: ' . $mysqli->error
         );
     } else {
         $stmt->bind_param("s", $email);
@@ -37,8 +37,9 @@ if (isset($_POST['sign-in'])) {
 
             if (password_verify($password, $user['password'])) {                
                 // Set user_id in the session
-                $_SESSION['user_id'] = $user['user_id'];                
-                header("Location:../view/landingpage.php");
+                $_SESSION['user_id'] = $user['user_id'];  
+                echo "done";              
+                header("Location:../view/Home_Dashboard.php");
                 exit;
 
             } else {
