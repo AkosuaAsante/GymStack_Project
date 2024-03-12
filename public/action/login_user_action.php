@@ -35,20 +35,12 @@ if (isset($_POST['sign-in'])) {
             // Fetch record
             $user = $result->fetch_assoc();
 
-            if (password_verify($password, $user['password'])) {
-                // Set user_id and role in the session
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['role'] = $user['role'];
-
-                // Include user role in the JSON response
-                $response = array(
-                    'success' => true,
-                    'role' => $user['role']
-                );
-
-                header('Content-Type: application/json');
-                echo json_encode($response);
+            if (password_verify($password, $user['password'])) {                
+                // Set user_id in the session
+                $_SESSION['user_id'] = $user['user_id'];             
+                header("Location:../view/Home_Dashboard.php");
                 exit;
+
             } else {
                 // Invalid password
                 $response = array(
@@ -70,4 +62,3 @@ if (isset($_POST['sign-in'])) {
     echo json_encode($response);
     exit;
 }
-
