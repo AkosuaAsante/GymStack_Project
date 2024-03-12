@@ -16,8 +16,8 @@
     </div>
 
     <h2 id="welcome-back">Welcome Back</h2>
-    <p id="no-account">Don't have an account yet? <a id="register" href="#">Register</a></p>
-    <form method="POST" onsubmit="return validateLogin()" id="login-form" name="login-form">
+    <p id="no-account">Don't have an account yet? <a id="register" href="register.php">Register</a></p>
+    <form  action = "../action/login_user_action.php" method="POST" onsubmit="return validateLogin()" id="login-form" name="login-form">
       <div>
         <input type="text" id="email" name="email" placeholder="email address" required />
         <input type="password" id="password" name="password" placeholder="password" required />

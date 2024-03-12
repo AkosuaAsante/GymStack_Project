@@ -18,7 +18,7 @@
       <p class="error-msg" id="error-msg"></p>
 
 
-      <form class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
+      <form  action="../action/register_user_action.php" class="form-background" method="POST" onsubmit="validateForm(event)" id="register-form" name="register-form" >
           <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
 
           <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required />
@@ -29,15 +29,11 @@
 
           <input type="password" id="confirmpassword" name="confirmPassword" placeholder="Confirm Password" required />
 
-          <input type="text" class="form-control" id="gymname" placeholder="Gym Name">
+          <input type="text" class="form-control" name="gymname" id="gymname" placeholder="Gym Name" required/>
 
-          <input type="number" class="form-control" id="phoneNumber" placeholder="Phone Number">
-                  <select id="role" class="form-select" name="role" title="role">
-                    <option name="role"value=0>Role</option>
-                    <option name="role" value=1>Manager</option>
-                    <option name="role" value=2>Customer</option>
-                  </select>
-            <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
+          <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+
+          <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
 
       </form>
     </div>
@@ -55,6 +51,8 @@
 
 
             const nameRegex = /^[A-Za-z\s]+$/;
+            const phoneRegex = /^(\+\d{1,4}\s?)?\d{6,14}$/;
+
            const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
            const errorMessagesContainer = document.getElementById('error-msg');
            errorMessagesContainer.innerHTML = "";
@@ -77,14 +75,12 @@
                 alert('Invalid Phone Number');
                
             }
-
           
             if (!validator.isEmail(email)) {
                 errorMessages.push('Invalid Email Address')
                 alert('Invalid email address');
              
             }
-
           
             if (!validator.isLength(password, { min: 6 })) {
                errorMessages.push('Password must be at least 6 characters long');
@@ -96,14 +92,13 @@
                 errorMessages.push('Passwords do not match')
                 alert('Passwords do not match');
             }
-
             if (errorMessages.length > 0) {
-                errorMessagesContainer.innerHTML = errorMessages.join('<br>');
+              errorMessagesContainer.innerHTML = errorMessages.join('<br>');
             } else {
-                errorMessagesContainer.innerHTML = ''; 
-                alert('Registration successful!');
-
+              errorMessagesContainer.innerHTML = ''; 
+              document.getElementById('register-form').submit();
             }
+
         }
 
       </script>

@@ -1,0 +1,37 @@
+# Ignore vendor directory for PHP projects
+/vendor/
+
+# Ignore node_modules directory for JavaScript projects
+/node_modules/
+
+# Ignore compiled CSS files
+*.css.map
+
+# Ignore minified JavaScript files
+*.min.js
+
+# Ignore compiled TypeScript files
+*.js
+
+# Ignore log files
+*.log
+
+# Ignore IDE/Editor specific files
+.idea/
+.vscode/
+
+# Ignore database configuration files
+config/database.php
+
+# Ignore environment configuration files
+.env
+
+# Ignore any backup files
+*.bak
+
+# Ignore any temporary files or caches
+*.tmp
+*.cache
+
+# Ignore database dump files
+*.sql

@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="login">
-      <a href="../login/login.php">Login</a>
+      <a href="../login/loginpage.php">Login</a>
     </div>
   </div>
   <div class="content">
@@ -69,7 +69,7 @@
     <p>
       Join GYM STACK today and take your gym management to the next level!
     </p>
-    <a href="#" class="btn">Sign Up Now</a>
+    <a href="../login/register.php" class="btn">Sign Up Now</a>
   </div>
 
   <footer>

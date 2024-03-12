@@ -9,9 +9,13 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/dasboard.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+    <?php 
+    require_once('../functions/get_statistics.php');
+    ?>
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
@@ -36,9 +40,9 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Tasks.php" class="sidebar-link">
+                    <a href="../view/Events.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
-                        <span>Tasks </span>
+                        <span>Events </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
@@ -61,7 +65,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="../login/logout.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>
@@ -73,31 +77,78 @@
                     <p class="navbar-brand lead">Dashboard</p>
                 </div>
             </nav>
-            <div class="row mt-4">
-                <!-- Upcoming Events -->
-                <div class="col md-4 mx-4 ">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">Upcoming Events</h6>
-                            <!-- Add upcoming events content here -->
-                        </div>
-                    </div>
-                    </nav>
-                    <div class="row mt-4">
-                        <!-- Upcoming Events -->
-                        <a href="../view/Tasks.php" style='text-decoration:none;'>
-                            <div class="col md-4 mx-4 ">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Upcoming Events</h6>
-                                        <!-- Add upcoming events content here -->
-                                    </div>
-                                </div>
+
+                <div class="row mt-4">
+                    <!-- Upcoming Events -->
+                    <a href="../view/Events.php" style='text-decoration:none;' >
+                     <div class="col md-4 mx-4 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Upcoming Events</h6>
+                                <!-- Add upcoming events content here -->
+                                <?php
+                                require_once('../functions/get_upcoming_event.php');
+                                ?>
                             </div>
-                        </a>
+                        </div>   
+                      </div>   
+                    </a>
+                </div>  
+                
+                <div class="row mt-5 m-4">
+                    <div class="col-md-4">
+                         <div class="card enlarge-card">
+                            <div class="card-body">
+                                <p class="card-title"><i class="lni lni-revenue"></i> Total Revenue</p>
+                                <p class="card-text text-5xl text-blue-500"><?php echo $revenue; ?></p>
+                            </div>
+                          </div>
                     </div>
-
+                    <div class="col-md-4">
+                         <div class="card enlarge-card">
+                            <div class="card-body">
+                                <p class="card-title"><i class="lni lni-revenue"></i> Total Expenses</p>
+                                <p class="card-text text-5xl text-red-500"><?php echo $expenses; ?></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                         <div class="card enlarge-card">
+                            <div class="card-body">
+                                <p class="card-title"><i class="lni lni-revenue"></i> Net Profit</p>
+                                <p class="card-text text-5xl text-green-500"><?php echo $profit; ?></p>
+                            </div>
+                    </div>
                 </div>
+                
+                
+              <div class="row mt-5 m-4">
+                <div class="col-md-6">
+                         <div class="card enlarge-card">
+                            <div class="card-body">
+                                <p class="card-title"><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/group-foreground-selected.png" 
+                                alt="group-foreground-selected"/> Total Customers</p>
+                                <p class="card-text text-5xl text-purple-500"><?php echo $total_customers; ?></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                         <div class="card enlarge-card">
+                            <div class="card-body">
+                                <p class="card-title"><img width="30" height="30" 
+                                src="https://img.icons8.com/ios-filled/50/group-foreground-selected.png" 
+                                alt="group-foreground-selected"/></i> Active Customers</p>
+                                <p class="card-text text-5xl text-orange-500"><?php echo $active_customers; ?></p>
+                            </div>
+                          </div>
+                    </div>
+                   
+                </div>
+               </div> 
+
+
+
+           
 
 
 
@@ -112,7 +163,7 @@
 
 
 
-            </div>
+           
 
 
 
