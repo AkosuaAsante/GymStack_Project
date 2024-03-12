@@ -33,12 +33,7 @@
 
           <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
 
-                  <select id="role" class="form-select" name="role" title="role">
-                    <option name="role"value=0>Role</option>
-                    <option name="role" value=1>Manager</option>
-                    <option name="role" value=2>Customer</option>
-                  </select>
-            <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
+          <button type="submit" name="sign-in" id="sign-in">Sign Up</button>
 
       </form>
     </div>

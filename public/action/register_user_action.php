@@ -9,8 +9,7 @@ if (true) {
     $lname = $_POST['lname'];
     $email = $_POST['email'];
     $phoneNumber = $_POST['phoneNumber'];
-    $password = $_POST['password'];
-    $role = $_POST['role'];
+    $password = $_POST['password'];   
     $gymname = $_POST['gymname'];
 
     // Encrypt the password 
@@ -19,12 +18,12 @@ if (true) {
     // Check if the connection object is valid
     if ($mysqli) {
         // Prepare the SQL statement
-        $query = "INSERT INTO users (fname, lname, email, phoneNumber, password, role, gymname) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO users (fname, lname, email, phoneNumber, password, gymname) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($query);
 
         if ($stmt) {
             // Bind parameters and execute the query
-            $stmt->bind_param("sssssis", $fname, $lname, $email,$phoneNumber, $hashed_password, $role, $gymname);           
+            $stmt->bind_param("ssssss", $fname, $lname, $email,$phoneNumber, $hashed_password, $gymname);           
             
             if ($stmt->execute()) {
                 // Set registration success message and redirect
@@ -50,6 +49,3 @@ if (true) {
      }
  }
 
-// // If form not submitted, redirect back to register_view page
-// header("Location: ../login/register.php");
-// exit();
