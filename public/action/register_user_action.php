@@ -13,9 +13,6 @@ if (true) {
     $role = $_POST['role'];
     $gymname = $_POST['gymname'];
 
-//     // Convert role to integ
-
-
     // Encrypt the password 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -47,7 +44,7 @@ if (true) {
             exit();
       }
     } else {
-//         // Redirect with a generic error message
+
         header("Location: ../login/register.php?registration_error=true");
          exit();
      }

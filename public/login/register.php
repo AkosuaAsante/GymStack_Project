@@ -80,14 +80,12 @@
                 alert('Invalid Phone Number');
                
             }
-
           
             if (!validator.isEmail(email)) {
                 errorMessages.push('Invalid Email Address')
                 alert('Invalid email address');
              
             }
-
           
             if (!validator.isLength(password, { min: 6 })) {
                errorMessages.push('Password must be at least 6 characters long');
