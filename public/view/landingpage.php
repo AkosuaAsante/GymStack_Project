@@ -81,11 +81,17 @@
       <div class="footer-links">
         <ul>
           <li><a href="../view/landingpage.php">Home</a></li>
-          <p style="color: white">|</p>
+          <li>
+            <p style="color: white">|</p>
+          </li>
           <li><a href="#">About</a></li>
-          <p style="color: white">|</p>
+          <li>
+            <p style="color: white">|</p>
+          </li>
           <li><a href="#">Services</a></li>
-          <p style="color: white">|</p>
+          <li>
+            <p style="color: white">|</p>
+          </li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
@@ -99,7 +105,7 @@
       <p>&copy; 2024 GYM STACK. All rights reserved.</p>
     </div>
   </footer>
-  </div>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

@@ -132,8 +132,11 @@
                         <div class="mb-3">
                             <label for="class-name" class="form-label">Class Name</label>
                             <input type="text" class="form-control" id="class-name" name="class-name" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="class-date" class="form-label">Date</label>
                             <input type="date" class="form-control" id="class-date" name="class-date" required>
+<<<<<<< Updated upstream
                             <label for="class-start-time" class="form-label">Start Time</label>
                             <input type="time" class="form-control" id="class-start-time" name="class-start-time" required>
                             <label for="class-end-time" class="form-label">end Time</label>
@@ -147,15 +150,32 @@
                                         echo "<option value=" . $role['instructor_id'] . ">" .  $role['full_name'] . "</option>";
                                     }
                                     ?>
+=======
+                        </div>
+                        <div class="mb-3"><label for="class-time" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="class-time" name="class-time" required>
+                        </div>
+                        <div class="mb-3"><label for="instructor-name" class="form-label">Instructor Name</label>
+                            <select class="form-select" name="instructor-name" id="instructor-name">
+                                <option value="Steve Urkel"> Steve Urkel</option>
+                                <option value="Jessice Jones">Jessice Jones</option>
+                                <option value="David Graham">David Graham</option>
+                                <option value="Kristine Sparks">Kristine Sparks</option>
+>>>>>>> Stashed changes
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </form>
+                        <button type="button" class="btn btn-primary" onclick="addClass()">Add
+                            Class</button>
                 </div>
+
             </div>
 
-            <div>
-            </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+    </div>
 
 
 
@@ -195,17 +215,17 @@
 
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
-            <script src="../js/dashboard.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-                crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Zi5KYJ4ZR/GGu0oOe1t9u4UpQ7g6jtjX9QQxqRYUNMz1EKDDSZuLlqKG5L/KO2bD"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

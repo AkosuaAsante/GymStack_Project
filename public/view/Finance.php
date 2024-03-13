@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="#" class="sidebar-link">
+                    <a href="../view/Classes.php" class="sidebar-link">
                         <i class="lni lni-bi-cycle"></i>
                         <span>Classes </span>
                     </a>
