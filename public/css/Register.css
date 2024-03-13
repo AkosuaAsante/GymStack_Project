@@ -1,24 +1,27 @@
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #191919;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     position: relative;
     background-image: url('../images/back.jpg'); 
     background-size: cover;
-    background-position: center;      
+    background-position: center;
+    background-repeat: no-repeat;     
 }
+
 h2, p,label {
     color: white;
 }
+
 .login-container {
     width: 90%;
     height: 100vh;
     max-width: 45em;
-    padding:  8em 5em;
-    border-radius: 10px;
+    /* padding:  8em 5em; */
+    border-radius: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -29,47 +32,49 @@ h2, p,label {
 
 form {
     width: 80%;
-    padding: 2em;
-  
-}
-.form-background {
+    padding: 2.5em;
+    margin-bottom: 10em;
+    border-radius: 50px;
     background-color: #242424;
-    border-radius: 10px;
-    height:100vh;
-  }
+    border-radius: 50px;
+    height:auto;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-input,select{
-    width: 100%;
-    padding: 1em;
-    margin: 6px 0;
+}
+
+input, select, option, button {
+    width: 90%;
+    padding: 1.5em;
+    margin: 1em 0;
     box-sizing: border-box;
     border: 0.5px solid #1d1d1d;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #191919;
-    color:#fff;      
+    color: white;   
 }
 
 option{
     color: white;
     margin-right: 45px;
-    font-size: 1.5em
+    font-size: 1em
 
 }
-select{
-    color:grey;
-    margin-right: 45px;
-    font-size: 1.0em
+
+input {
+    height: 4em;
 }
-
-
 input::placeholder {
     color: grey;
     margin-right: 45px;
-    font-size: 1.3em;
+    font-size: 1em;
   }
   
 button {
-    width: 100%;
+    width: 90%;
     padding: 1.5em;
     background-color: rgb(0, 89, 255);
     color: #fff;
@@ -77,7 +82,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
-    margin-top:0.5em;
+    margin-top:2em;
 }
 
 button:hover {
@@ -106,14 +111,14 @@ button:hover {
     display: inline;
 }
 
- #no-account {
-    font-size: 1.2em;
+#no-account {
+    font-size: 1em;
     font-weight: 300;
  }
 
  #welcome-back {
-    font-size: 1.3em;
-    margin-bottom:5px;
+    font-size: 2em;
+    margin-bottom: 10px;
  }
 
  #welcome-message{

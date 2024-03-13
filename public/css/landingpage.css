@@ -8,26 +8,22 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  background-color: #17191E;
+  color: #fff;
 }
 
 
 
-/* .main {
+.main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-} */
-
-.pictures {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
+  height: auto;
 }
+
 
 .overlay {
   position: absolute;
@@ -55,12 +51,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 0 5px black;
+
 }
 
 .icon {
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .logo {
@@ -79,9 +79,8 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  display: flex;
-  width: 35em;
-  justify-content: space-around;
+  width: 40em;
+  justify-content: space-evenly;
 }
 
 .menu ul li a {
@@ -96,19 +95,24 @@ body {
   color: #00ffea;
 }
 
+.login {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
 .login a {
   background: #0d7377;
   border-radius: 10px;
   cursor: pointer;
   transition: .4s ease;
-  margin: auto;
+  /* margin: auto; */
   text-decoration: none;
   color: #000;
   transition: .3s ease;
   font-weight: bold;
   color: white;
   padding: 10px 20px;
-  display: inline-block;
 }
 
 
