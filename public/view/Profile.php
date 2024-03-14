@@ -94,82 +94,85 @@
                                     <label for="profile-picture"
                                         class="block text-sm font-semibold text-gray-700">Profile
                                         Picture</label>
-<<<<<<< Updated upstream
+
                                     <div id="profile-image" class="box-content h-40 w-40">
-                                        <img class="object-scale-down h-48" id="profile-image"
-                                            src="../images/blank profile.png" alt="profile"width='50px' length="50px" />
-=======
-                                    <div class=" border-2 container h-40 w-40">
-                                        <img class="object-cover h-48 w-96" id="profile-image"
-                                            src="../images/avatar.jpg" alt="profile" />
->>>>>>> Stashed changes
+                                        <!-- <img class="object-scale-down h-72" id="profile-image"
+                                            src="../images/blank profile.png" alt="profile" width='50px'
+                                            length="50px" /> -->
+                                        <div class=" border-2 container h-40 w-40">
+                                            <img class="object-cover h-48 w-48" id="profile-image"
+                                                src="../images/avatar.jpg" alt="profile" />
+                                        </div>
+                                        <input type="file" id="profile-pic-input" name="profilePicture" class="mt-2"
+                                            accept="image/*">
+
                                     </div>
-                                    <input type="file" id="profile-pic-input" name="profilePicture" class="mt-2"
-                                        accept="image/*">
 
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="first-name" class="block text-sm font-semibold text-gray-700">First
+                                            Name</label>
+                                        <input type="text" id="first-name" name="firstName" value="John"
+                                            class="form-control">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="first-name" class="block text-sm font-semibold text-gray-700">First
-                                        Name</label>
-                                    <input type="text" id="first-name" name="firstName" value="John"
-                                        class="form-control">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="last-name" class="block text-sm font-semibold text-gray-700">Last
+                                            Name</label>
+                                        <input type="text" id="last-name" name="lastName" value="Doe"
+                                            class="form-control">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="last-name" class="block text-sm font-semibold text-gray-700">Last
-                                        Name</label>
-                                    <input type="text" id="last-name" name="lastName" value="Doe" class="form-control">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="email" class="block text-sm font-semibold text-gray-700">Email
+                                            Address</label>
+                                        <input type="password" id="current-password" name="currentPassword"
+                                            class="form-control" placeholder="johdoe@gmail.com">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="email" class="block text-sm font-semibold text-gray-700">Email
-                                        Address</label>
-                                    <input type="password" id="current-password" name="currentPassword"
-                                        class="form-control" placeholder="johdoe@gmail.com">
-                                </div>
+                                    <hr class="mt-4 mb-4" />
 
-                                <hr class="mt-4 mb-4" />
+                                    <div class="mb-4">
+                                        <label for="current-password"
+                                            class="block text-sm font-semibold text-gray-700">Current
+                                            Password</label>
+                                        <input type="password" id="current-password" name="currentPassword"
+                                            class="form-control" placeholder="***********">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="current-password"
-                                        class="block text-sm font-semibold text-gray-700">Current
-                                        Password</label>
-                                    <input type="password" id="current-password" name="currentPassword"
-                                        class="form-control" placeholder="***********">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="new-password" class="block text-sm font-semibold text-gray-700">New
+                                            Password</label>
+                                        <input type="password" id="new-password" name="newPassword" class="form-control"
+                                            placeholder="***********">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="new-password" class="block text-sm font-semibold text-gray-700">New
-                                        Password</label>
-                                    <input type="password" id="new-password" name="newPassword" class="form-control"
-                                        placeholder="***********">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="org-name"
+                                            class="block text-sm font-semibold text-gray-700">Organisation
+                                            Name</label>
+                                        <input type="text" id="org-name" name="orgname" value="Fitness"
+                                            class="form-control">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="org-name" class="block text-sm font-semibold text-gray-700">Organisation
-                                        Name</label>
-                                    <input type="text" id="org-name" name="orgname" value="Fitness"
-                                        class="form-control">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="org-name" class="block text-sm font-semibold text-gray-700">Phone
+                                            Number
+                                        </label>
+                                        <input type="text" id="org-name" name="orgname" value="+233554306250"
+                                            class="form-control">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="org-name" class="block text-sm font-semibold text-gray-700">Phone Number
-                                    </label>
-                                    <input type="text" id="org-name" name="orgname" value="+233554306250"
-                                        class="form-control">
-                                </div>
+                                    <div class="mb-4">
+                                        <label for="role" class="block text-sm font-semibold text-gray-700">Role</label>
+                                        <input type="text" id="last-name" name="lastName" value="Doe"
+                                            class="form-control">
+                                    </div>
 
-                                <div class="mb-4">
-                                    <label for="role" class="block text-sm font-semibold text-gray-700">Role</label>
-                                    <input type="text" id="last-name" name="lastName" value="Doe" class="form-control">
-                                </div>
+                                    <div class="mb-4">
 
-                                <div class="mb-4">
+                                    </div>
 
-                                </div>
-
-                                <button type="submit" class="btn btn-success">Save Changes</button>
+                                    <button type="submit" class="btn btn-success">Save Changes</button>
                             </form>
                             <div class="mb-10">
                             </div>
