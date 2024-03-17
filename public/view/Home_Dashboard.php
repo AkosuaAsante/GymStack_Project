@@ -16,6 +16,7 @@
     <?php 
     require_once('../functions/get_statistics.php');
     require_once('../settings/core.php');
+    check_login();
     ?>
     <div class="wrapper">
         <aside id="sidebar">
