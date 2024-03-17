@@ -15,6 +15,7 @@
 <body>
     <?php 
     require_once('../functions/get_statistics.php');
+    require_once('../settings/core.php');
     ?>
     <div class="wrapper">
         <aside id="sidebar">
