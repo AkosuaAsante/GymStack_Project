@@ -42,6 +42,10 @@ $classes = mysqli_fetch_assoc($result);
     // Include the role selection query logic
     require_once('../functions/select_instructor.php');
     ?>
+    <?php
+    require_once('../settings/core.php');
+    check_login();
+    ?>
     <div id='modal' class='z-10 modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center'>
         <div class='modal-content bg-white m-20 my-auto p-20 w-1/2 absolute'>
             <span id='closeModal' class='hover:text-black focus:text-black absolute  -top-3 right-0 pb-5 text-3xl font-bold cursor-pointer text-red-600' onclick="redirectToPage()">&times;</span>

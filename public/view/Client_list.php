@@ -13,6 +13,10 @@
 </head>
 
 <body>
+<?php
+    require_once('../settings/core.php');
+    check_login();
+    ?>
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
