@@ -65,7 +65,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="../login/logout.php" class="sidebar-link">
+                <a href="../action/logout_action.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>

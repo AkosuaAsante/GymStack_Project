@@ -25,44 +25,44 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-items">
-                    <a href="../view/Home_Dashboard.php" class="sidebar-link">
+                    <a href="Home_Dashboard.php" class="sidebar-link">
                         <i class="lni lni-home"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Client_list.php" class="sidebar-link">
+                    <a href="Client_list.php" class="sidebar-link">
                         <i class="lni lni-list"></i>
                         <span>Client List</span>
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Events.php" class="sidebar-link">
+                    <a href="Events.php" class="sidebar-link">
                         <i class="lni lni-clipboard"></i>
                         <span>Events </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Classes.php" class="sidebar-link">
+                    <a href="Classes.php" class="sidebar-link">
                         <i class="lni lni-bi-cycle"></i>
                         <span>Classes </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Finance.php" class="sidebar-link">
+                    <a href="Finance.php" class="sidebar-link">
                         <i class="lni lni-coin"></i>
                         <span>Finances </span>
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Profile.php" class="sidebar-link">
+                    <a href="Profile.php" class="sidebar-link">
                         <i class="lni lni-user"></i>
                         <span>Profile </span>
                     </a>
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="../action/logout_action.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>
