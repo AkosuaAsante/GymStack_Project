@@ -17,13 +17,15 @@
     require_once('../settings/connection.php');
     check_login();
 
-    if (isset($_SESSION['user_id'])) {
-        // Get the form data
-        $id = $_SESSION['user_id'];
 
-        // Prepare and execute SQL query to retrieve user data
-        $query = "SELECT * FROM users WHERE user_id = ?";
-    }
+    // Get the form data
+    $id = $_SESSION['user_id'];
+
+    // Prepare and execute SQL query to retrieve user data
+    $query = "SELECT * FROM users WHERE user_id = '$id'";
+    $result = $mysqli->query($query);
+    $chore = mysqli_fetch_assoc($result);
+
     ?>
     <div class="wrapper">
         <aside id="sidebar">
@@ -115,19 +117,19 @@
                                 <div class="mb-4">
                                     <label for="first-name" class="block text-sm font-semibold text-gray-700">First
                                         Name</label>
-                                    <input type="text" id="first-name" name="firstName" value="John" class="form-control">
+                                    <input type="text" id="first-name" name="firstName" value="<?php echo $chore['fname'] ?>" class="form-control">
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="last-name" class="block text-sm font-semibold text-gray-700">Last
                                         Name</label>
-                                    <input type="text" id="last-name" name="lastName" value="Doe" class="form-control">
+                                    <input type="text" id="last-name" name="lastName" value="<?php echo $chore['lname']; ?>" class="form-control">
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="email" class="block text-sm font-semibold text-gray-700">Email
                                         Address</label>
-                                    <input type="password" id="current-password" name="currentPassword" class="form-control" placeholder="johdoe@gmail.com">
+                                    <input type="password" id="current-password" name="currentPassword" class="form-control" value="<?php echo $chore['email']; ?>">
                                 </div>
 
                                 <hr class="mt-4 mb-4" />
@@ -145,26 +147,10 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <label for="org-name" class="block text-sm font-semibold text-gray-700">Organisation
-                                        Name</label>
-                                    <input type="text" id="org-name" name="orgname" value="Fitness" class="form-control">
-                                </div>
-
-                                <div class="mb-4">
                                     <label for="org-name" class="block text-sm font-semibold text-gray-700">Phone Number
                                     </label>
-                                    <input type="text" id="org-name" name="orgname" value="+233554306250" class="form-control">
+                                    <input type="text" id="org-name" name="orgname" value="<?php echo $chore['phoneNumber']; ?>" class="form-control">
                                 </div>
-
-                                <div class="mb-4">
-                                    <label for="role" class="block text-sm font-semibold text-gray-700">Role</label>
-                                    <input type="text" id="last-name" name="lastName" value="Doe" class="form-control">
-                                </div>
-
-                                <div class="mb-4">
-
-                                </div>
-
                                 <button type="submit" class="btn btn-success">Save Changes</button>
                             </form>
                             <div class="mb-10">
