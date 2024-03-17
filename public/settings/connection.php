@@ -1,6 +1,6 @@
 <?php
 // Declare constant variables for database connection parameters
-$SERVER = "localhost:3308";
+$SERVER = "18.133.105.236";
 $USERNAME = "root";
 $PASSWORD = "cs341webtech";
 $DATABASE = "gym";

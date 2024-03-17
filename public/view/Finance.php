@@ -12,6 +12,10 @@
 </head>
 
 <body>
+<?php
+    require_once('../settings/core.php');
+    check_login();
+    ?>
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
@@ -42,7 +46,7 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="#" class="sidebar-link">
+                    <a href="Classes.php" class="sidebar-link">
                         <i class="lni lni-bi-cycle"></i>
                         <span>Classes </span>
                     </a>
@@ -61,7 +65,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="../action/logout_action.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>
