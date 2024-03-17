@@ -1,8 +1,8 @@
 <?php
 // Declare constant variables for database connection parameters
-$SERVER = "localhost";
+$SERVER = "localhost:3308";
 $USERNAME = "root";
-$PASSWORD = "";
+$PASSWORD = "cs341webtech";
 $DATABASE = "gym";
 
 $mysqli = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE) or die("The database was not created");
