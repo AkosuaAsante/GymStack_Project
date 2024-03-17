@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-<<<<<<< Updated upstream
   height: auto;
   overflow-x: hidden;
   background-color: #17191E;
@@ -17,23 +16,12 @@ body {
 
 
 
-=======
-  height: 100vh;
-  overflow-x: hidden;
-}
-
->>>>>>> Stashed changes
 .main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-<<<<<<< Updated upstream
   height: auto;
-=======
-  height: 100%;
-  display: flex;
->>>>>>> Stashed changes
 }
 
 
@@ -62,26 +50,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< Updated upstream
   position: fixed;
   z-index: 1000;
   box-shadow: 0 0 5px black;
 
-=======
-  padding: 0 20px;
-  position: top;
->>>>>>> Stashed changes
 }
 
 
 .icon {
   display: flex;
   align-items: center;
-<<<<<<< Updated upstream
   margin-left: 20px;
-=======
-
->>>>>>> Stashed changes
 }
 
 .logo {
@@ -99,7 +78,6 @@ body {
 .menu {
   display: flex;
   align-items: center;
-  border: red solid;
 }
 
 .menu ul {
@@ -107,13 +85,8 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-<<<<<<< Updated upstream
   width: 40em;
   justify-content: space-evenly;
-=======
-  width: 35em;
-  justify-content: space-around;
->>>>>>> Stashed changes
 }
 
 .menu ul li a {
@@ -146,12 +119,6 @@ body {
   font-weight: bold;
   color: white;
   padding: 10px 20px;
-<<<<<<< Updated upstream
-=======
-  display: inline-block;
-  margin-right: 4em;
-
->>>>>>> Stashed changes
 }
 
 

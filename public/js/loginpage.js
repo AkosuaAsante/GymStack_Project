@@ -7,10 +7,6 @@ function validateLogin(){
     var password = document.getElementById("password").value;
     const emailValid = emailRegex.test(emailaddress);
     const passwordValid = passwordRegex.test(password);
-    console.log(emailaddress);
-    console.log(emailValid)
-    console.log(password);
-    console.log(passwordValid);
     if(emailValid && passwordValid){
         alert("Login Successful")
         window.location.href = "../view/Home_Dashboard.php";
