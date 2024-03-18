@@ -6,7 +6,7 @@ function showError(element,message) {
       }
        
 
-function validateRegister(){
+function validateRegister(event){
         event.preventDefault();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
@@ -20,12 +20,25 @@ function validateRegister(){
         var confirmPassword=document.getElementById("confirmPassword");
 
 
-         if (!nameRegex.test(fname)) {
+         if (!nameRegex.test(fname.textContent)) {
                 showError("fname-error-msg","Invalid first name. Please use letters, spaces, and hyphens.");
                 return false;
         } 
-        else if (!nameRegex.test(lname)) {
+        if (!nameRegex.test(lname.textContent)) {
                 showError("lname-error-msg","Invalid last name. Please use letters, spaces, and hyphens.");
+                return false;
+        }
+
+        if (!emailRegex.test(email.textContent)) {
+                showError("lname-error-msg","Invalid Email.");
+                return false;
+        }
+        if (!password.test(password.textContent)) {
+                showError("lname-error-msg","Weak Password");
+                return false;
+        }
+        if (password.textContent != confirmPassword.textContent) {
+                showError("lname-error-msg","Passwords do not match");
                 return false;
         }
 

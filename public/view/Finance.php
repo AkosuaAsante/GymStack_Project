@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <?php
+    require_once ('../settings/core.php');
+    check_login();
+    ?>
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
@@ -42,10 +46,13 @@
                     </a>
                 </li>
                 <li class="sidebar-items">
-                    <a href="../view/Classes.php" class="sidebar-link">
-                        <i class="lni lni-bi-cycle"></i>
-                        <span>Classes </span>
-                    </a>
+                    <<<<<<< HEAD <a href="../view/Classes.php" class="sidebar-link">
+                        =======
+                        <a href="Classes.php" class="sidebar-link">
+                            >>>>>>> a69c6419eaf76eb890e4ea43c2daee7475b753ca
+                            <i class="lni lni-bi-cycle"></i>
+                            <span>Classes </span>
+                        </a>
                 </li>
                 <li class="sidebar-items">
                     <a href="../view/Finance.php" class="sidebar-link">
@@ -61,7 +68,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="../action/logout_action.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>
@@ -95,9 +102,9 @@
                                 </thead>
                                 <tbody id="transactionTableBody">
                                     <!-- Transaction data w-->
-                                    <?php 
-                                        require_once("../functions/get_all_transactions.php")
-                                    ?>
+                                    <?php
+                                    require_once ("../functions/get_all_transactions.php")
+                                        ?>
                                 </tbody>
                             </table>
                         </div>
@@ -130,7 +137,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="amount" class="form-label">Amount</label>
-                            <input type="number" class="form-control" id="amount"  name="amount" required>
+                            <input type="number" class="form-control" id="amount" name="amount" required>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>

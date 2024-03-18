@@ -8,8 +8,7 @@ function validateLogin(){
     const emailValid = emailRegex.test(emailaddress);
     const passwordValid = passwordRegex.test(password);
     if(emailValid && passwordValid){
-        alert("Login Successful")
-        window.location.href = "../view/Home_Dashboard.php";
+        window.location.href = "../action/login_user_action.php";
         return false;
     } else {
         errorMsg.style.display = 'block';
